@@ -1,16 +1,28 @@
-var x = 0
-function changeCard() {
-	if (x<10) {
-		console.log(x);
-		document.getElementById("Current Card").src = "Card_pics/red_"+x.toString(10)+".jpg";
-		x++;
-		
-	}
-	if (x==6) {
-	return;
-	}
+var x = 1
+var path = "Card_pics/"
+var red = "red_"
+var blue = "blue_"
+var green = "green_"
+var yellow = "yellow_"
+var extension = ".jpg"
+
+Player_1_count = 1
+Player_2_count = 1
+function changePlayer1Card() {
 	
-} 
+	if (Player_1_count<=9) {
+		console.log(Player_1_count);
+		document.getElementById("Player_1").src = path+red+Player_1_count.toString(10)+extension;
+		Player_1_count++;
+	}
+}
+function changePlayer2Card() {
+	if (Player_2_count<=9) {
+		console.log(Player_2_count);
+		document.getElementById("Player_2").src = path+blue+Player_2_count.toString(10)+extension;
+		Player_2_count++;
+	}
+}
 
 
 function Dealing() 
